@@ -1,17 +1,16 @@
 package com.omar.artemiss
+
 import android.os.Bundle
-import android.webkit.WebView
-import android.webkit.WebViewClient
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val webView = WebView(this)
-        setContentView(webView)
-        webView.settings.javaScriptEnabled = true
-        webView.settings.domStorageEnabled = true
-        webView.settings.allowFileAccess = true
-        webView.webViewClient = WebViewClient()
-        webView.loadUrl("file:///android_asset/artemiss/index.html")
+        val textView = TextView(this)
+        textView.text = "Artemiss instalada!\nFunciona :D"
+        textView.textSize = 24f
+        textView.setPadding(50, 200, 50, 50)
+        setContentView(textView)
     }
 }
